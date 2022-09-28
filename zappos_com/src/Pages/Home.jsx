@@ -1,4 +1,6 @@
 import React from "react";
+import HomePage_Text_Carousel from "../Components/HomePage_Text_Carousel";
+import Home_Page from "../Components/Home_Page";
 import Navbar from "../Components/Navbar";
 import SecondTopMostBar from "../Components/SecondTopMostBar";
 import SmallScreenSearchBar from "../Components/SmallScreenSearchBar";
@@ -13,6 +15,8 @@ const Home = () => {
       <TopSearchBar />
       <SmallScreenSearchBar/>
       <Navbar />
+      <HomePage_Text_Carousel/>
+      <Home_Page/>
     </>
   );
 };

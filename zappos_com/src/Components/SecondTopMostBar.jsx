@@ -15,7 +15,7 @@ import React from "react";
 
 const SecondTopMostBar = () => {
   return (
-    <Flex color="white">
+    <Flex color="white" w={"auto"}>
       <Menu>
         <MenuButton
           bg="rgb(0,118,189)"
