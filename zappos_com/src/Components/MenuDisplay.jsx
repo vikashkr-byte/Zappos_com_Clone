@@ -8,20 +8,20 @@ const MenuDisplay = ({ data_list, data_image }) => {
     <>
       <HStack direction={"column"}>
         {data_list.map((item) => (
-          <VStack>
-            <MenuItem fontSize={"19px"} fontWeight={500} _hover={{
+          <VStack key={item.heading}>
+            <MenuItem  fontSize={"19px"} fontWeight={500} _hover={{
                 borderBottom:"2px",
                 color:"rgb(7,48,73)"
             }}  >{item.heading}</MenuItem>
             {item.listItems.map((listItem) => (
-              <MenuItem _hover={{
+              <MenuItem key={listItem} _hover={{
                 borderBottom:"2px",
                 color:"rgb(7,48,73)"
             }}>{listItem}</MenuItem>
             ))}
           </VStack>
         ))}
-        {/* //   <MenuItem>Create a Copy</MenuItem> */}
+   
 
         <VStack direction={"column"}>
           {data_image.map((itemImage) => (
@@ -51,19 +51,3 @@ const MenuDisplay = ({ data_list, data_image }) => {
 };
 
 export default MenuDisplay;
-{/* <Box w="140px">
-<Box w="100%">
-  <Image w="100%" src={itemImage.image} />
-</Box>
-<Box
-  w="100%"
-  h="50px"
-  
-  
-  bgColor="rgb(7,48,73)"
->
-  <Text textAlign={"center"} pt="15px" overflow={"hidden"} color={"white"} fontSize={"15px"} fontWeight={500}>
-    {itemImage.text_under_image}
-  </Text>
-</Box>
-</Box> */}

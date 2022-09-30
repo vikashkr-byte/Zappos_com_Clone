@@ -1,5 +1,7 @@
 import {
   AddIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
   EditIcon,
   ExternalLinkIcon,
   HamburgerIcon,
@@ -41,11 +43,11 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { BiUserCircle } from "react-icons/bi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaHotjar } from "react-icons/fa";
-
+import Small_Screen_Sign_in from "./Small_Screen_Sign_in";
 
 const TopSearchBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const firstField = React.useRef()
+ 
 
   return (
     <Flex alignItems="center" gap="2" w="100%" paddingRight={"5px"}>
@@ -56,67 +58,45 @@ const TopSearchBar = () => {
             alignItems="center"
             p="10px"
           >
-            {/* <GiHamburgerMenu size={"30px"}/> */}
+
             <Menu>
               <MenuButton
                 as={IconButton}
                 aria-label="Options"
-                icon={isOpen?<IoMdCloseCircleOutline size="30px" color="#2c88ff" />:<HamburgerIcon size="30px"  />}
+                icon={<HamburgerIcon size="30px" />}
                 variant="outline"
-                onClick={onOpen}
-                
+              
               />
               <MenuList>
-                <Drawer 
-                  isOpen={isOpen}
-                  placement="left"
-                  // initialFocusRef={firstField}
-                  onClose={onClose}
-                 
-                >
-                  <DrawerOverlay />
-                  <DrawerContent  mt="170px" w={"400px"} >
-                  
-
-                    <DrawerBody >
-                      <Stack spacing="24px">
-                      <Text>New</Text>
-                      <Text>Women</Text>
-                      <Text>Men</Text>
-                      <Text>Departments</Text>
-                      <Text>Brands</Text>
-                      <Text>Sale</Text>
-                      <Text>
-                      <Flex gap="2">
-                <FaHotjar color="rgb(255, 157, 38)" />
-                Clothing
-              </Flex>
-                      </Text>
-                     
-                      </Stack>
-                    </DrawerBody>
-
-                    <DrawerCloseButton />
-                    <DrawerFooter borderTopWidth="1px">
-                      <Button variant="outline" mr={3} onClick={onClose}>
-                        Cancel
-                      </Button>
-                      
-                    </DrawerFooter>
-                  </DrawerContent>
-                </Drawer>
-                {/* // <MenuItem icon={<AddIcon />} command="⌘T">
-                //   New Tab
-                // </MenuItem>
-                // <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-                //   New Window
-                // </MenuItem>
-                // <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-                //   Open Closed Tab
-                // </MenuItem>
-                // <MenuItem icon={<EditIcon />} command="⌘O">
-                //   Open File...
-                // </MenuItem> */}
+           
+                <MenuItem justifyContent={"space-between"}>
+                  New <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Women <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Men <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Kids <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Departments <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Brands <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  Sale <ChevronRightIcon />
+                </MenuItem>
+                <MenuItem justifyContent={"space-between"}>
+                  <Flex gap="2" alignItems={"center"}>
+                    <FaHotjar color="rgb(255, 157, 38)" />
+                    Clothing
+                  </Flex>{" "}
+                  <ChevronRightIcon />
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -164,7 +144,14 @@ const TopSearchBar = () => {
         mr="5px"
         gap="10px"
       >
-        <BiUserCircle size={"30px"} />
+        <Button  bgColor="white"
+        _focus={{
+          bgColor:"white"
+        }} 
+        onClick={onOpen}>
+          <BiUserCircle size={"30px"} />
+          <Small_Screen_Sign_in isOpen={isOpen} onClose={onClose} />
+        </Button>
         <MdOutlineShoppingCart size={"30px"} />
       </ButtonGroup>
       <ButtonGroup pr="25px" display={["none", "none", "flex", "flex"]}>
@@ -184,3 +171,63 @@ const TopSearchBar = () => {
 };
 
 export default TopSearchBar;
+
+{
+  /*
+ {/* </MenuList>
+</Menu> */
+}
+{
+  /* <Drawer 
+                  isOpen={isOpen}
+                  placement="left"
+                  // initialFocusRef={firstField}
+                  onClose={onClose}
+                 
+                >
+                  <DrawerOverlay />
+                  <DrawerContent  mt="170px" w={"400px"} >
+                  
+
+                    <DrawerBody >
+                      <Stack spacing="24px">
+                      <Text>New</Text>
+                      <Text>Women</Text>
+                      <Text>Men</Text>
+                      <Text>Departments</Text>
+                      <Text>Brands</Text>
+                      <Text>Sale</Text>
+                      <Text>
+                      <Flex gap="2">
+                <FaHotjar color="rgb(255, 157, 38)" />
+                Clothing
+              </Flex>
+                      </Text>
+                     
+                      </Stack>
+                    </DrawerBody>
+
+                    <DrawerCloseButton />
+                    <DrawerFooter borderTopWidth="1px">
+                      <Button variant="outline" mr={3} onClick={onClose}>
+                        Cancel
+                      </Button>
+                      
+                    </DrawerFooter>
+                  </DrawerContent>
+                </Drawer> */
+}
+{
+  /* // <MenuItem icon={<AddIcon />} command="⌘T">
+                //   New Tab
+                // </MenuItem>
+                // <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
+                //   New Window
+                // </MenuItem>
+                // <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
+                //   Open Closed Tab
+                // </MenuItem>
+                // <MenuItem icon={<EditIcon />} command="⌘O">
+                //   Open File...
+                // </MenuItem> */
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -29,6 +29,7 @@ import {
 import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import { FaHotjar } from "react-icons/fa";
 import MenuDisplay from "./MenuDisplay";
+import Sign_In_modal from "./Sign_In_modal";
 {
   /*
 new
@@ -195,18 +196,27 @@ const Navbar_Menu_Women_image = [
 ];
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  
+  const [size, setSize] = useState("4xl");
+  // const btnRef = useRef(null);
+
+  const handleSizeClick = () => {
+    setSize("4xl");
+    onOpen();
+  };
   return (
-    <Flex
-      minWidth="max-content"
+    <Flex 
+
+      // minWidth="max-content"
       w="100%"
       bgColor={"rgb(244,244,244)"}
       px="10px"
       alignItems="center"
-      display={["none", "none", "flex", "flex"]}
+      display={["none", "none", "none","none", "flex"]}
     >
       <ButtonGroup gap="1">
         <Button
-          width={"auto"}
+          // width={"auto"}
           px="-20px"
           color="rgb(24,75,99)"
           _hover={{ bg: "none", borderBottom: "2px", borderRadius: "none" }}
@@ -1021,29 +1031,11 @@ const Navbar = () => {
             padding: "5px",
           }}
           bg="none"
-          onClick={onOpen}
+          onClick={handleSizeClick}
         >
           Sign In / Register
           {/* <Button >Open Modal</Button> */}
-          <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay />
-            <ModalContent>
-              <ModalHeader>Modal Title</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody>
-                <Text fontWeight="bold" mb="1rem">
-                  You can scroll the content behind the modal
-                </Text>
-                {/* <Lorem count={2} /> */}
-              </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={onClose}>
-                  Close
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
+          <Sign_In_modal isOpen={isOpen} onClose={onClose} />
         </Button>
       </ButtonGroup>
     </Flex>

@@ -15,7 +15,7 @@ import React from "react";
 
 const SecondTopMostBar = () => {
   return (
-    <Flex color="white" w={"auto"}>
+    <Flex color="white" w={"100%"}>
       <Menu>
         <MenuButton
           bg="rgb(0,118,189)"
@@ -45,7 +45,7 @@ const SecondTopMostBar = () => {
           <MenuItem>Give Us Feedback</MenuItem>
         </MenuList>
       </Menu>
-      <Flex bg="rgb(0,118,189)" w={"88%"} justifyContent="flex-end">
+      <Flex bg="rgb(0,118,189)" w={"100%"} justifyContent="flex-end">
         <HStack
           ml={"40px"}
           _hover={{
