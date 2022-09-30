@@ -20,9 +20,13 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Sign_In_modal = ({ isOpen, onClose }) => {
+  const navigate=useNavigate()
+  const handle_signin=()=>{
+navigate("/signin")
+  }
   return (
     <Modal
       onClose={onClose}
@@ -41,6 +45,7 @@ const Sign_In_modal = ({ isOpen, onClose }) => {
             <Flex w="100%" h={"300px"} p="2px">
               <HStack w="50%" h={"100%"}>
                 <Stack direction="column" w="100%" pl="6%" mt="-65px" gap={3}>
+                  <Link to="/signin" >
                   <Button
                     _hover={{
                       backgroundColor: "rgb(0,118,189)",
@@ -53,16 +58,21 @@ const Sign_In_modal = ({ isOpen, onClose }) => {
                     variant="outline"
                     border="2px"
                     borderRadius={"3px"}
-                  >
+                    onClick={handle_signin}
+                    >
                     <Image
                       src="https://i.postimg.cc/gjs3hbwV/zappos-shoes-blue-bg-none.png"
                       alt="zapposShoes"
                       h={"80%"}
-                    />
+                      />
+                   
+                      
                     <Text fontSize={"14px"} fontWeight="700">
                       SIGN IN WITH ZAPPOS
                     </Text>
+                   
                   </Button>
+                      </Link>
                   <Button
                     _hover={{
                       backgroundColor: "rgb(0,118,189)",

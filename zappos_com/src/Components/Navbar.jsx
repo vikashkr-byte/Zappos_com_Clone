@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -30,6 +30,7 @@ import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import { FaHotjar } from "react-icons/fa";
 import MenuDisplay from "./MenuDisplay";
 import Sign_In_modal from "./Sign_In_modal";
+import { AuthContext } from "../AuthContex/AuthContext";
 {
   /*
 new
@@ -196,7 +197,7 @@ const Navbar_Menu_Women_image = [
 ];
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+  const {dummydata,isAuth,isToken}=useContext(AuthContext)
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
 
@@ -1032,8 +1033,9 @@ const Navbar = () => {
           }}
           bg="none"
           onClick={handleSizeClick}
+          disabled={isAuth}
         >
-          Sign In / Register
+          {isAuth?dummydata: "Sign In / Register"}
           {/* <Button >Open Modal</Button> */}
           <Sign_In_modal isOpen={isOpen} onClose={onClose} />
         </Button>

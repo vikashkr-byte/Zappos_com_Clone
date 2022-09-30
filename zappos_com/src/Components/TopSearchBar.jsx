@@ -37,17 +37,28 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { BiUserCircle } from "react-icons/bi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaHotjar } from "react-icons/fa";
 import Small_Screen_Sign_in from "./Small_Screen_Sign_in";
+import Sign_In_modal from "./Sign_In_modal";
+import { AuthContext } from "../AuthContex/AuthContext";
 
 const TopSearchBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
- 
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  const {dummydata,isAuth,isToken}=useContext(AuthContext)
+  
+  const [size, setSize] = useState("4xl");
+  // const btnRef = useRef(null);
+console.log('isAuth:', isAuth)
+  const handleSizeClick = () => {
+    setSize("4xl");
+    onOpen();
+  };
 
   return (
     <Flex alignItems="center" gap="2" w="100%" paddingRight={"5px"}>
@@ -161,9 +172,12 @@ const TopSearchBar = () => {
           border="2px"
           color="rgb(3,93,89)"
           p="10px"
+          onClick={handleSizeClick}
+          disabled={isAuth}
         >
-          <MdOutlineShoppingCart size={"20px"} />
-          <Text ml="10px">MY CART</Text>
+           <MdOutlineShoppingCart size={"20px"} />
+          <Text ml="10px">{ isAuth?dummydata:"MY CART"}</Text>
+          <Sign_In_modal isOpen={isOpen} onClose={onClose} />
         </Button>
       </ButtonGroup>
     </Flex>
