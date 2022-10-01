@@ -1,5 +1,5 @@
 import { Stack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomePage_Text_Carousel from "../Components/HomePage_Text_Carousel";
 import Navbar from "../Components/Navbar";
 import SecondTopMostBar from "../Components/SecondTopMostBar";
