@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import {
   Box,
   Button,
@@ -30,6 +30,7 @@ import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import { FaHotjar } from "react-icons/fa";
 import MenuDisplay from "./MenuDisplay";
 import Sign_In_modal from "./Sign_In_modal";
+import { AuthContext } from "../AuthContex/AuthContext";
 {
   /*
 new
@@ -196,7 +197,7 @@ const Navbar_Menu_Women_image = [
 ];
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+  const { dummydata, isAuth, isToken, handleLogOut } = useContext(AuthContext);
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
 
@@ -205,14 +206,13 @@ const Navbar = () => {
     onOpen();
   };
   return (
-    <Flex 
-
+    <Flex
       // minWidth="max-content"
       w="100%"
       bgColor={"rgb(244,244,244)"}
       px="10px"
       alignItems="center"
-      display={["none", "none", "none","none", "flex"]}
+      display={["none", "none", "none", "none", "flex"]}
     >
       <ButtonGroup gap="1">
         <Button
@@ -1031,10 +1031,27 @@ const Navbar = () => {
             padding: "5px",
           }}
           bg="none"
-          onClick={handleSizeClick}
+          onClick={isAuth ? isOpen : handleSizeClick}
+          // disabled={isAuth}
         >
-          Sign In / Register
           {/* <Button >Open Modal</Button> */}
+          <Menu>
+            {({ isOpen }) => (
+              <>
+                <MenuButton
+                  isActive={isOpen}
+                  as={Button}
+                  rightIcon={<ChevronDownIcon />}
+                >
+                  {isAuth ? dummydata : "Sign In / Register"}
+                </MenuButton>
+                <MenuList borderRadius={"none"}>
+                  <MenuItem>My Cart</MenuItem>
+                  <MenuItem onClick={() => handleLogOut()}>Sign Out</MenuItem>
+                </MenuList>
+              </>
+            )}
+          </Menu>
           <Sign_In_modal isOpen={isOpen} onClose={onClose} />
         </Button>
       </ButtonGroup>

@@ -50,7 +50,6 @@ const Home_Page = () => {
   return (
     <>
       <Bannercomponent display={["none","none","none","FLEX"]} />
-      <Product_lineOne />
     </>
   );
 };

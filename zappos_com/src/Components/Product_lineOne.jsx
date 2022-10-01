@@ -21,11 +21,11 @@ const Shop_popular_categories = [
         "https://m.media-amazon.com/images/I/61h70xJXNRL._AC_SX255_.jpg",
       Shop_popular_categories_title: "Sandals On Sale",
     },
-    // {
-    //   Shop_popular_categories_image:
-    //     "https://m.media-amazon.com/images/I/81W8icKY5PL._AC_SX255_.jpg",
-    //   Shop_popular_categories_title: "Denim",
-    // },
+    {
+      Shop_popular_categories_image:
+        "https://m.media-amazon.com/images/I/81W8icKY5PL._AC_SX255_.jpg",
+      Shop_popular_categories_title: "Denim",
+    },
     {
       Shop_popular_categories_image:
         "https://m.media-amazon.com/images/I/716Hx34WZnL._AC_SX255_.jpg",
