@@ -31,6 +31,9 @@ const Sign_in_page = () => {
     if(isAuth){
         document.title=`Welcome, ${dummydata}`
     }
+    if(isAuth){
+      return navigate("/")
+  }
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,9 +47,7 @@ const Sign_in_page = () => {
       })
       .then((res) =>  handleLogin(res.data.token));
   };
-  if(isAuth){
-    return navigate("/")
-}
+
   return (
     <Stack w="400px" m="auto">
       <Flex w="100%" justifyContent={"center"}>
