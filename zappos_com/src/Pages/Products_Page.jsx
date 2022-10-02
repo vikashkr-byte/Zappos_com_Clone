@@ -19,7 +19,7 @@ import { BsCart2 } from "react-icons/bs";
 
 const Products_Page = () => {
   // console.log("ProductsData:", ProductsData[0].category.name);
-  console.log("ProductsData:", ProductsData);
+  // console.log("ProductsData:", ProductsData);
   let cata=ProductsData.filter((item)=>(
     item.category.name==="Clothes"
     

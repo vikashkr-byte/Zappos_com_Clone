@@ -16,6 +16,639 @@
   "profile": {
     "name": "typicode"
   },
+  "products_data_women": [
+    {
+      "id": 1,
+      "gender": "women",
+      "title": "NIC+ZOE",
+      "price": 69.95,
+      "description": "Perfect Layer",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/810Y7LHbmfL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 2,
+      "gender": "women",
+      "title": "Madewell",
+      "price": 98.00,
+      "description": "Duster Cardigan",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71owzhbkV+L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 3,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81cJl0ICvPL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 4,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81oCC+iyC8L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 5,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71lgpGBzomL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 6,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 7,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 8,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/716CTDrhE-L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 9,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 10,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81NUmvlrMjL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 11,
+      "gender": "women",
+      "title": "NIC+ZOE",
+      "price": 69.95,
+      "description": "Perfect Layer",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/810Y7LHbmfL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 12,
+      "gender": "women",
+      "title": "Madewell",
+      "price": 98.00,
+      "description": "Duster Cardigan",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71owzhbkV+L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 13,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81cJl0ICvPL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 14,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81oCC+iyC8L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 15,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71lgpGBzomL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 16,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 17,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 18,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/716CTDrhE-L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 19,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 20,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81NUmvlrMjL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 21,
+      "gender": "women",
+      "title": "NIC+ZOE",
+      "price": 69.95,
+      "description": "Perfect Layer",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/810Y7LHbmfL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 22,
+      "gender": "women",
+      "title": "Madewell",
+      "price": 98.00,
+      "description": "Duster Cardigan",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71owzhbkV+L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 23,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81cJl0ICvPL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 24,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81oCC+iyC8L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 25,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71lgpGBzomL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 26,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 27,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 28,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/716CTDrhE-L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 29,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 30,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 31,
+      "gender": "women",
+      "title": "NIC+ZOE",
+      "price": 69.95,
+      "description": "Perfect Layer",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/810Y7LHbmfL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 32,
+      "gender": "women",
+      "title": "Madewell",
+      "price": 98.00,
+      "description": "Duster Cardigan",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71owzhbkV+L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 33,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81cJl0ICvPL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 34,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81oCC+iyC8L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 35,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/71lgpGBzomL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 36,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 37,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81OHJ6uoULL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 38,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/716CTDrhE-L._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 39,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 40,
+      "gender": "women",
+      "title": "CeCe",
+      "price": 68.95,
+      "description": "3/4 Ruffled V-Neck Top",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81p8afjHDtL._AC_SR1472,1840__FMwebp_.jpg"
+    }],
+    "products_data_men":[
+    {
+      "id": 41,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 42,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 43,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 44,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 45,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 46,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 47,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 48,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 49,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 50,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 51,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 52,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 53,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 54,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 55,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 56,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 57,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 58,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 59,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 60,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 61,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 62,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 63,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 64,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 65,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 66,
+      "gender": "men",
+      "title": "Faherty",
+      "price":118.95,
+      "description": "Long Sleeve Movement Polo",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81kO1C5SNgL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 67,
+      "gender": "men",
+      "title": "Boss",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61riRrLRPuL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 68,
+      "gender": "men",
+      "title": "Levi's® Mens",
+      "price": 98.95,
+      "description": "Tee Curved Regular Fit Jersey T-Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/61Fjzi8zcNL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 69,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Jackson Worker",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81mLa0TIBkL._AC_SR1472,1840__FMwebp_.jpg"
+    },
+    {
+      "id": 70,
+      "gender": "men",
+      "title": "Levi's® Premium",
+      "price": 98.95,
+      "description": "Cubano Shirt",
+      "category": "Clothes",
+      "image": "https://m.media-amazon.com/images/I/81yczpDFwoL._AC_SR1472,1840__FMwebp_.jpg"
+    }
+  ],
   "ProductsData": [
     {
       "id": 2,

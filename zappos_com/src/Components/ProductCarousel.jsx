@@ -70,7 +70,7 @@ const ProductCarousel_Data = [
 
 const ProductCarousel = () => {
   const [numImage, setNumImage] = useState(0);
-  console.log("numImage:", numImage);
+  // console.log("numImage:", numImage);
 
   return (
     <Flex

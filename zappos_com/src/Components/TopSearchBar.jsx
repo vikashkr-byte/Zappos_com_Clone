@@ -46,6 +46,7 @@ import { FaHotjar } from "react-icons/fa";
 import Small_Screen_Sign_in from "./Small_Screen_Sign_in";
 import Sign_In_modal from "./Sign_In_modal";
 import { AuthContext } from "../AuthContex/AuthContext";
+import { Link } from "react-router-dom";
 
 const TopSearchBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -111,6 +112,8 @@ console.log('isAuth:', isAuth)
               </MenuList>
             </Menu>
           </Flex>
+          <Link to="/" >
+
           <Flex w="130px" height={"74px"} p="5px">
             <Image
               src="https://1000logos.net/wp-content/uploads/2020/09/Zappos-Logo.png"
@@ -120,6 +123,7 @@ console.log('isAuth:', isAuth)
               ml="15px"
             />
           </Flex>
+          </Link>
         </Flex>
         <Flex p={"17px"} width="58%" h={"100%"} ml="32px" alignItems="center">
           <InputGroup display={["none", "none", "flex", "flex"]}>
