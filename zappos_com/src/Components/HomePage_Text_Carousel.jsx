@@ -26,7 +26,7 @@ const Text_Carousel_HomePage = [
 
 const HomePage_Text_Carousel = () => {
   const [numText, setNumText] = useState(0);
-  console.log("numText:", numText);
+  // console.log("numText:", numText);
 
   return (
     <Flex

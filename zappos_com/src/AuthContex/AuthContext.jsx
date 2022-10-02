@@ -4,7 +4,7 @@ export const AuthContext=createContext()
 
 export const AuthContextProvider=({children})=>{
     const dummydata="Vikash"
-const [isAuth,setIsAuth]=useState(false)
+const [isAuth,setIsAuth]=useState(true)
 const [isToken,setIsToken]=useState(null)
 const handleLogin=(token)=>{
 setIsAuth(true)
