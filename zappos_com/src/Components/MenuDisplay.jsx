@@ -57,6 +57,12 @@ const MenuDisplay = ({ data_list, data_image }) => {
           ))}
         </VStack>
       </HStack>
+      
+ 
+
+ 
+      
+
     </>
   );
 };

@@ -6,6 +6,11 @@ export const AuthContextProvider = ({ children }) => {
   const dummydata = "Vikash";
   const [isAuth, setIsAuth] = useState(false);
   const [isToken, setIsToken] = useState(null);
+  const [cartItem, setCartItem] = useState(0);
+
+  const handleCartCount = (totalItemsInCart) => {
+    setCartItem(totalItemsInCart);
+  };
   const handleLogin = (token) => {
     setIsAuth(true);
     setIsToken(token);
@@ -16,7 +21,15 @@ export const AuthContextProvider = ({ children }) => {
   };
   return (
     <AuthContext.Provider
-      value={{ isAuth, isToken, handleLogin, handleLogOut, dummydata }}
+      value={{
+        isAuth,
+        isToken,
+        handleLogin,
+        handleLogOut,
+        dummydata,
+        cartItem,
+        handleCartCount,
+      }}
     >
       {children}
     </AuthContext.Provider>

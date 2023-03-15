@@ -127,9 +127,9 @@ const ProductPageOG = () => {
         mb="5px"
       >
         {products_data.map((item) => (
-          <Link to={`/products/${item.id}`}>
+          <Link to={`/products/${item.id}`}  key={item.id}>
             <GridItem
-              key={item.id}
+             
               w="auto"
               h="auto"
               mb={1}

@@ -51,11 +51,11 @@ import { Link } from "react-router-dom";
 const TopSearchBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const { isOpen, onOpen, onClose } = useDisclosure();
-  const {dummydata,isAuth,isToken}=useContext(AuthContext)
-  
+  const { dummydata, isAuth, isToken, cartItem } = useContext(AuthContext);
+
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
-console.log('isAuth:', isAuth)
+  console.log("isAuth:", isAuth);
   const handleSizeClick = () => {
     setSize("4xl");
     onOpen();
@@ -70,17 +70,14 @@ console.log('isAuth:', isAuth)
             alignItems="center"
             p="10px"
           >
-
             <Menu>
               <MenuButton
                 as={IconButton}
                 aria-label="Options"
                 icon={<HamburgerIcon size="30px" />}
                 variant="outline"
-              
               />
               <MenuList>
-           
                 <MenuItem justifyContent={"space-between"}>
                   New <ChevronRightIcon />
                 </MenuItem>
@@ -112,17 +109,16 @@ console.log('isAuth:', isAuth)
               </MenuList>
             </Menu>
           </Flex>
-          <Link to="/" >
-
-          <Flex w="130px" height={"74px"} p="5px">
-            <Image
-              src="https://1000logos.net/wp-content/uploads/2020/09/Zappos-Logo.png"
-              alt="mainlogo"
-              w="100%"
-              h="100%"
-              ml="15px"
-            />
-          </Flex>
+          <Link to="/">
+            <Flex w="130px" height={"74px"} p="5px">
+              <Image
+                src="https://1000logos.net/wp-content/uploads/2020/09/Zappos-Logo.png"
+                alt="mainlogo"
+                w="100%"
+                h="100%"
+                ml="15px"
+              />
+            </Flex>
           </Link>
         </Flex>
         <Flex p={"17px"} width="58%" h={"100%"} ml="32px" alignItems="center">
@@ -159,30 +155,48 @@ console.log('isAuth:', isAuth)
         mr="5px"
         gap="10px"
       >
-        <Button  bgColor="white"
-        _focus={{
-          bgColor:"white"
-        }} 
-        onClick={onOpen}>
+        <Button
+          bgColor="white"
+          _focus={{
+            bgColor: "white",
+          }}
+          onClick={onOpen}
+        >
           <BiUserCircle size={"30px"} />
           <Small_Screen_Sign_in isOpen={isOpen} onClose={onClose} />
         </Button>
         <MdOutlineShoppingCart size={"30px"} />
       </ButtonGroup>
       <ButtonGroup pr="25px" display={["none", "none", "flex", "flex"]}>
-        <Button
-          borderColor="rgb(167,230,136)"
-          variant={"outline"}
-          border="2px"
-          color="rgb(3,93,89)"
-          p="10px"
-          onClick={handleSizeClick}
-          disabled={isAuth}
-        >
-           <MdOutlineShoppingCart size={"20px"} />
-          <Text ml="10px">{ isAuth?dummydata:"MY CART"}</Text>
-          <Sign_In_modal isOpen={isOpen} onClose={onClose} />
-        </Button>
+        <Link to={"/mycart"}>
+          <Button
+            borderColor="rgb(167,230,136)"
+            variant={"outline"}
+            border="2px"
+            color="rgb(3,93,89)"
+            p="10px"
+            onClick={handleSizeClick}
+            // disabled={isAuth}
+          >
+            <Box >
+              {isAuth
+                ?  <Box display={'flex'} w="auto" justifyContent="space-between" alignItems={'center'} >
+
+                <MdOutlineShoppingCart size={"20px"} />
+                <Text mx="5px" >{cartItem}</Text>
+                <Text>Items in Cart</Text>
+                </Box>
+                : 
+                <Box display={'flex'} w="100px" justifyContent="space-between" alignItems={'center'} >
+
+                <MdOutlineShoppingCart size={"20px"} />
+                <Text>MY CART</Text>
+                </Box>}
+            </Box>
+
+            <Sign_In_modal isOpen={isOpen} onClose={onClose} />
+          </Button>
+        </Link>
       </ButtonGroup>
     </Flex>
   );

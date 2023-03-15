@@ -4,6 +4,7 @@ import Home_Page from "../Components/Home_Page";
 import PrivateRoutes from "../Components/PrivateRoutes";
 import Error from "../Pages/Error";
 import Home from "../Pages/Home";
+import MyCart_Page from "../Pages/MyCart_Page";
 import ProductPageOG from "../Pages/ProductPageOG";
 import Products_Page from "../Pages/Products_Page";
 import Sign_in_page from "../Pages/Sign_in_page";
@@ -27,6 +28,14 @@ const Allroutes = () => {
         element={
           <PrivateRoutes>
             <SingleProductPage />
+          </PrivateRoutes>
+        }
+      ></Route>
+      <Route
+        path={"/mycart"}
+        element={
+          <PrivateRoutes>
+            <MyCart_Page />
           </PrivateRoutes>
         }
       ></Route>
