@@ -27,7 +27,7 @@ const SingleProductPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (numid <= 40) {
-      fetch(`http://localhost:8080/products_data_women/${numid}`)
+      fetch(`https://zappos-api.onrender.com/products_data_women/${numid}`)
         .then((res) => res.json())
         .then((res) => {
           console.log("res2:", res);
@@ -35,7 +35,7 @@ const SingleProductPage = () => {
           setData(res);
         });
     } else if (numid >= 41 && numid <= 70) {
-      fetch(`http://localhost:8080/products_data_men/${numid}`)
+      fetch(`https://zappos-api.onrender.com/products_data_men/${numid}`)
         .then((res) => res.json())
         .then((res) => {
           console.log("res1:", res);
