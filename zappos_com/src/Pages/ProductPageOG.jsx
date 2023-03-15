@@ -54,7 +54,7 @@ const ProductPageOG = () => {
 
     axios
       .get(
-        `http://localhost:8080/products_data_women?_page=${page}&_limit=${limit}`
+        `https://zappos-api.onrender.com/products_data_women?_page=${page}&_limit=${limit}`
       )
       .then((res) => {
         setProducts_data(res.data);
@@ -67,7 +67,7 @@ const ProductPageOG = () => {
     setProducts_data([]);
     axios
       .get(
-        `http://localhost:8080/products_data_men?_page=${page}&_limit=${limit}`
+        `https://zappos-api.onrender.com/products_data_men?_page=${page}&_limit=${limit}`
       )
       .then((res) => {
         setProducts_data(res.data);
@@ -86,7 +86,7 @@ const ProductPageOG = () => {
       <Navbar />
       <HomePage_Text_Carousel />
       <LoadingComponent statusQuo={isLoading} justifySelf={"center"} />
-      <Divider/>
+      <Divider />
       <Flex
         minWidth="max-content"
         alignItems="center"
@@ -97,10 +97,18 @@ const ProductPageOG = () => {
         bgColor={"rgb(229,241,248)"}
       >
         <ButtonGroup gap="2">
-          <Button color="white" bgColor="rgb(0,118,189)" onClick={handleClickWomen}>
+          <Button
+            color="white"
+            bgColor="rgb(0,118,189)"
+            onClick={handleClickWomen}
+          >
             Women
           </Button>
-          <Button color="white" bgColor="rgb(0,118,189)" onClick={handleClickMen}>
+          <Button
+            color="white"
+            bgColor="rgb(0,118,189)"
+            onClick={handleClickMen}
+          >
             Men
           </Button>
         </ButtonGroup>
