@@ -85,7 +85,7 @@ const ProductPageOG = () => {
       <SmallScreenSearchBar />
       <Navbar />
       <HomePage_Text_Carousel />
-      <LoadingComponent statusQuo={isLoading} justifySelf={"center"} />
+      
       <Divider />
       <Flex
         minWidth="max-content"
@@ -117,6 +117,8 @@ const ProductPageOG = () => {
           <Heading size="md"></Heading>
         </Box>
       </Flex>
+      <LoadingComponent statusQuo={isLoading} justifySelf={"center"} />
+
       <Grid
         templateColumns={["repeat(2, 1fr)", "repeat(4, 1fr)"]}
         gap={2}
@@ -166,6 +168,7 @@ const ProductPageOG = () => {
           </Link>
         ))}
       </Grid>
+
       <Flex gap={1} pr="40px" mb="30px" justifyContent={"flex-end"}>
         <Button disabled={page === 1} onClick={() => setPage(page - 1)}>
           Prev

@@ -20,8 +20,9 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { AuthContext } from "../AuthContex/AuthContext";
 import Footer_HomePage from "../Components/Footer_HomePage";
 import HomePage_Text_Carousel from "../Components/HomePage_Text_Carousel";
 import Navbar from "../Components/Navbar";
@@ -41,19 +42,25 @@ const initialData = {
   price: "",
 };
 const SingleProductPage = () => {
+  const { cartItem,setCartItem } = useContext(AuthContext);
   const { id } = useParams();
   const [data, setData] = useState(initialData);
   const [cartArray, setCartArray] = useState([]);
-  let numid = Number(id);
-  console.log("values:", typeof numid);
+const [totalCartItem,setTotalCartItem]=useState(0)
 
-  const [quantity,setQuantity]=useState(0)
+  // console.log('cartArray:', cartArray)
+// console.log('cartItem:', cartItem)
+  let numid = Number(id);
+  // console.log("values:", typeof numid);
+
+  const [quantity, setQuantity] = useState(1);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
 
   const navigate = useNavigate();
   useEffect(() => {
-    // setCartArray(JSON.parse(localStorage.getItem("zappos_cart")) || []);
+  //  let localData= JSON.parse(localStorage.getItem("zappos_cart")) || [];
+  //  console.log('localData:', localData)
     if (numid <= 40) {
       fetch(`https://zappos-api.onrender.com/products_data_women/${numid}`)
         .then((res) => res.json())
@@ -74,7 +81,9 @@ const SingleProductPage = () => {
       navigate("*");
     }
   }, []);
-
+const handleSetcartCount=(cartArray)=>{
+  setCartItem(cartArray.length)
+}
   const handleAddToCart = (data) => {
     alert("Zappos: Vikash, item added to your cart!");
     let { category, description, gender, id, image, price, title } = data;
@@ -89,16 +98,22 @@ const SingleProductPage = () => {
       quantity: quantity,
     };
     setCartArray([...cartArray, cartitem]);
+   
     console.log("cartArray:", cartArray);
-    // localStorage.setItem("zappos_cart", JSON.stringify(cartArray));
-    // onOpen()
+    localStorage.setItem("zappos_cart", JSON.stringify(cartArray));
+    // setCartArray(JSON.parse(localStorage.getItem("zappos_cart")))
+    onOpen();
+    setTotalCartItem(cartArray.length)
+    // handleCartCount(totalCartItem)
+   handleSetcartCount(cartArray)
+    console.log('cartItem:', cartItem)
   };
 
   return (
     <>
       <TopMostWithLogo />
       <SecondTopMostBar />
-      <TopSearchBar />
+      <TopSearchBar cartlist={cartArray}  />
       <SmallScreenSearchBar />
       <Navbar />
       <HomePage_Text_Carousel />
@@ -191,7 +206,19 @@ const SingleProductPage = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
-            Create a new account
+            {!cartArray ? (
+              "YOUR CART IS EMPTY"
+            ) : (
+              <Box
+                display={"flex"}
+                w="100%"
+                px="20px"
+                justifyContent={"center"}
+                alignItems="center"
+              >
+                <Text>{`You have (${cartArray.length}) in your cart.`}</Text>
+              </Box>
+            )}
           </DrawerHeader>
 
           <DrawerBody>

@@ -7,10 +7,10 @@ export const AuthContextProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [isToken, setIsToken] = useState(null);
   const [cartItem, setCartItem] = useState(0);
-
-  const handleCartCount = (totalItemsInCart) => {
-    setCartItem(totalItemsInCart);
-  };
+console.log('cartItem context:', cartItem)
+  // const handleCartCount = (totalItemsInCart) => {
+  //   setCartItem(totalItemsInCart);
+  // };
   const handleLogin = (token) => {
     setIsAuth(true);
     setIsToken(token);
@@ -28,7 +28,8 @@ export const AuthContextProvider = ({ children }) => {
         handleLogOut,
         dummydata,
         cartItem,
-        handleCartCount,
+        // handleCartCount,
+        setCartItem
       }}
     >
       {children}

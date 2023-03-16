@@ -37,7 +37,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { BiUserCircle } from "react-icons/bi";
@@ -48,11 +48,13 @@ import Sign_In_modal from "./Sign_In_modal";
 import { AuthContext } from "../AuthContex/AuthContext";
 import { Link } from "react-router-dom";
 
-const TopSearchBar = () => {
+const TopSearchBar = ({ cartlist }) => {
+  console.log("cartlist:", cartlist);
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const { isOpen, onOpen, onClose } = useDisclosure();
-  const { dummydata, isAuth, isToken, cartItem } = useContext(AuthContext);
-
+  const { dummydata, isAuth, isToken, cartItem, setCartItem } =
+    useContext(AuthContext);
+  const [navCartcount, setNavCartcount] = useState(cartItem);
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
   console.log("isAuth:", isAuth);
@@ -60,6 +62,9 @@ const TopSearchBar = () => {
     setSize("4xl");
     onOpen();
   };
+  useEffect(() => {
+    setNavCartcount(cartItem);
+  }, [cartItem]);
 
   return (
     <Flex alignItems="center" gap="2" w="100%" paddingRight={"5px"}>
@@ -178,20 +183,38 @@ const TopSearchBar = () => {
             onClick={handleSizeClick}
             // disabled={isAuth}
           >
-            <Box >
-              {isAuth
-                ?  <Box display={'flex'} w="auto" justifyContent="space-between" alignItems={'center'} >
+            <Box>
+              {isAuth ? (
+                <Box
+                  display={"flex"}
+                  w="auto"
+                  justifyContent="space-between"
+                  alignItems={"center"}
+                >
+                  <MdOutlineShoppingCart size={"20px"} mr="5px" />
+                  {cartlist ? (
+                    <Text mx="5px">
+                      {/* {navCartcount + 1} */}
+                      {cartlist.length}
+                      {/* {cartItem} */}
+                    </Text>
+                  ) : (
+                    0
+                  )}
 
-                <MdOutlineShoppingCart size={"20px"} />
-                <Text mx="5px" >{cartItem}</Text>
-                <Text>Items in Cart</Text>
+                  <Text ml="5px">Items in Cart</Text>
                 </Box>
-                : 
-                <Box display={'flex'} w="100px" justifyContent="space-between" alignItems={'center'} >
-
-                <MdOutlineShoppingCart size={"20px"} />
-                <Text>MY CART</Text>
-                </Box>}
+              ) : (
+                <Box
+                  display={"flex"}
+                  w="100px"
+                  justifyContent="space-between"
+                  alignItems={"center"}
+                >
+                  <MdOutlineShoppingCart size={"20px"} />
+                  <Text>MY CART</Text>
+                </Box>
+              )}
             </Box>
 
             <Sign_In_modal isOpen={isOpen} onClose={onClose} />
