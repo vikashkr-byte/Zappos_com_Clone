@@ -31,6 +31,7 @@ import { FaHotjar } from "react-icons/fa";
 import MenuDisplay from "./MenuDisplay";
 import Sign_In_modal from "./Sign_In_modal";
 import { AuthContext } from "../AuthContex/AuthContext";
+import { Link } from "react-router-dom";
 {
   /*
 new
@@ -200,6 +201,11 @@ const Navbar = () => {
   const { dummydata, isAuth, isToken, handleLogOut } = useContext(AuthContext);
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
+
+  const {
+    state: { cart },
+    dispatch,
+  } = useContext(AuthContext);
 
   const handleSizeClick = () => {
     setSize("4xl");
@@ -1046,7 +1052,9 @@ const Navbar = () => {
                   {isAuth ? dummydata : "Sign In / Register"}
                 </MenuButton>
                 <MenuList borderRadius={"none"}>
-                  <MenuItem>My Cart</MenuItem>
+                  <Link to="/mycart">
+                    <MenuItem>My Cart</MenuItem>
+                  </Link>
                   <MenuItem onClick={() => handleLogOut()}>Sign Out</MenuItem>
                 </MenuList>
               </>

@@ -58,6 +58,12 @@ const TopSearchBar = ({ cartlist }) => {
   const [size, setSize] = useState("4xl");
   // const btnRef = useRef(null);
   console.log("isAuth:", isAuth);
+
+  const {
+    state: { cart },
+    dispatch,
+  } = useContext(AuthContext);
+
   const handleSizeClick = () => {
     setSize("4xl");
     onOpen();
@@ -192,15 +198,16 @@ const TopSearchBar = ({ cartlist }) => {
                   alignItems={"center"}
                 >
                   <MdOutlineShoppingCart size={"20px"} mr="5px" />
-                  {cartlist ? (
-                    <Text mx="5px">
+                  {/* {cartlist ? ( */}
+                    {/* <Text mx="5px"> */}
                       {/* {navCartcount + 1} */}
-                      {cartlist.length}
+                      {/* {cartlist.length} */}
                       {/* {cartItem} */}
-                    </Text>
-                  ) : (
-                    0
-                  )}
+                    {/* </Text> */}
+                  {/* ) : ( */}
+                    {/* 0 */}
+                  {/* )} */}
+                  {cart.length}
 
                   <Text ml="5px">Items in Cart</Text>
                 </Box>

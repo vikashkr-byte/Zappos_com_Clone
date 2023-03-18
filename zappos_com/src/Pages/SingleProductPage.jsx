@@ -21,6 +21,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { MdOutlineDeleteForever } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../AuthContex/AuthContext";
 import Footer_HomePage from "../Components/Footer_HomePage";
@@ -42,14 +43,14 @@ const initialData = {
   price: "",
 };
 const SingleProductPage = () => {
-  const { cartItem,setCartItem } = useContext(AuthContext);
+  const { cartItem, setCartItem } = useContext(AuthContext);
   const { id } = useParams();
   const [data, setData] = useState(initialData);
   const [cartArray, setCartArray] = useState([]);
-const [totalCartItem,setTotalCartItem]=useState(0)
+  const [totalCartItem, setTotalCartItem] = useState(0);
 
   // console.log('cartArray:', cartArray)
-// console.log('cartItem:', cartItem)
+  // console.log('cartItem:', cartItem)
   let numid = Number(id);
   // console.log("values:", typeof numid);
 
@@ -58,9 +59,17 @@ const [totalCartItem,setTotalCartItem]=useState(0)
   const firstField = useRef();
 
   const navigate = useNavigate();
+
+  const {
+    state: { cart },
+    dispatch,
+  } = useContext(AuthContext);
+
+  console.log("cart:", cart);
+
   useEffect(() => {
-  //  let localData= JSON.parse(localStorage.getItem("zappos_cart")) || [];
-  //  console.log('localData:', localData)
+    //  let localData= JSON.parse(localStorage.getItem("zappos_cart")) || [];
+    //  console.log('localData:', localData)
     if (numid <= 40) {
       fetch(`https://zappos-api.onrender.com/products_data_women/${numid}`)
         .then((res) => res.json())
@@ -81,39 +90,39 @@ const [totalCartItem,setTotalCartItem]=useState(0)
       navigate("*");
     }
   }, []);
-const handleSetcartCount=(cartArray)=>{
-  setCartItem(cartArray.length)
-}
+  const handleSetcartCount = (cartArray) => {
+    setCartItem(cartArray.length);
+  };
   const handleAddToCart = (data) => {
     alert("Zappos: Vikash, item added to your cart!");
-    let { category, description, gender, id, image, price, title } = data;
-    let cartitem = {
-      category: category,
-      description: description,
-      gender: gender,
-      id: id,
-      image: image,
-      price: price,
-      title: title,
-      quantity: quantity,
-    };
-    setCartArray([...cartArray, cartitem]);
-   
-    console.log("cartArray:", cartArray);
-    localStorage.setItem("zappos_cart", JSON.stringify(cartArray));
+    // let { category, description, gender, id, image, price, title } = data;
+    // let cartitem = {
+    //   category: category,
+    //   description: description,
+    //   gender: gender,
+    //   id: id,
+    //   image: image,
+    //   price: price,
+    //   title: title,
+    //   quantity: quantity,
+    // };
+    // setCartArray([...cartArray, cartitem]);
+
+    // console.log("cartArray:", cartArray);
+    // localStorage.setItem("zappos_cart", JSON.stringify(cartArray));
     // setCartArray(JSON.parse(localStorage.getItem("zappos_cart")))
     onOpen();
-    setTotalCartItem(cartArray.length)
-    // handleCartCount(totalCartItem)
-   handleSetcartCount(cartArray)
-    console.log('cartItem:', cartItem)
+    // setTotalCartItem(cartArray.length);
+    // // handleCartCount(totalCartItem)
+    // handleSetcartCount(cartArray);
+    // console.log("cartItem:", cartItem);
   };
 
   return (
     <>
       <TopMostWithLogo />
       <SecondTopMostBar />
-      <TopSearchBar cartlist={cartArray}  />
+      <TopSearchBar cartlist={cartArray} />
       <SmallScreenSearchBar />
       <Navbar />
       <HomePage_Text_Carousel />
@@ -183,13 +192,35 @@ const handleSetcartCount=(cartArray)=>{
             >
               SHIPS FREE
             </Text>
-            <Button
+            {cart.some((p) => p.id === numid) ? (
+              <Button
+                colorScheme={"red"}
+                onClick={() => {
+                  dispatch({ type: "REMOVE FROM CART", payload: data });
+                  alert("Zappos: Vikash, item was removed from your cart!");
+                }}
+              >
+                Remove from cart
+              </Button>
+            ) : (
+              <Button
+                onClick={() => {
+                  dispatch({ type: "ADD TO CART", payload: data });
+                  handleAddToCart();
+                }}
+                bgColor={"green.100"}
+                color="rgb(3,93,89)"
+              >
+                {"Add to cart"}
+              </Button>
+            )}
+            {/* <Button
               onClick={() => handleAddToCart(data)}
               bgColor={"rgb(167,230,136)"}
               color="rgb(3,93,89)"
             >
               Add to Cart
-            </Button>
+            </Button> */}
           </Flex>
         </VStack>
       </Flex>
@@ -216,22 +247,69 @@ const handleSetcartCount=(cartArray)=>{
                 justifyContent={"center"}
                 alignItems="center"
               >
-                <Text>{`You have (${cartArray.length}) in your cart.`}</Text>
+                <Text>{`You have (${cart.length}) in your cart.`}</Text>
               </Box>
             )}
           </DrawerHeader>
 
           <DrawerBody>
             <Stack spacing="24px">
-              <Box></Box>
+              {cart.map((item, index) => (
+                <Box key={index} borderBottom="2px solid lightgray" p="5px">
+                  <Box>
+                    <Box
+                      display="flex"
+                      justifyContent={"space-around"}
+                      alignItems="center"
+                    >
+                      <Image src={item.image} h="70px" />
+                      <Text>{item.title}</Text>
+                      <Text> ₹ {item.price}</Text>
+                      <MdOutlineDeleteForever
+                        color="orange"
+                        size="20px"
+                        cursor={"pointer"}
+                        onClick={() =>
+                          dispatch({
+                            type: "REMOVE FROM CART",
+                            payload: item,
+                          })
+                        }
+                      />
+                    </Box>
+                  </Box>
+                  {/* <Box
+                    display="flex"
+                    justifyContent={"space-around"}
+                    alignItems="center"
+                  >
+                    <Button
+                      onClick={() =>
+                        dispatch({ type: "DECREMENT", payload: item })
+                      }
+                    >
+                      -
+                    </Button>
+                    <Text>{item.qty}</Text>
+                    <Button
+                      onClick={() =>
+                        dispatch({ type: "INCREMENT", payload: item })
+                      }
+                    >
+                      +
+                    </Button>
+                  </Box> */}
+                </Box>
+              ))}
             </Stack>
           </DrawerBody>
 
           <DrawerFooter borderTopWidth="1px">
             <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
+              Close
             </Button>
-            <Button colorScheme="blue">Submit</Button>
+            
+            {/* <Button colorScheme="blue">Submit</Button> */}
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

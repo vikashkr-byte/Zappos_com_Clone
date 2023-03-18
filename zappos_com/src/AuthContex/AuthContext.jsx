@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer, useState } from "react";
+import { cartReducer } from "./AppReducers";
 
 export const AuthContext = createContext();
 
@@ -7,10 +8,13 @@ export const AuthContextProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [isToken, setIsToken] = useState(null);
   const [cartItem, setCartItem] = useState(0);
-console.log('cartItem context:', cartItem)
+  console.log("cartItem context:", cartItem);
   // const handleCartCount = (totalItemsInCart) => {
   //   setCartItem(totalItemsInCart);
   // };
+  const [state, dispatch] = useReducer(cartReducer, {
+    cart: [],
+  });
   const handleLogin = (token) => {
     setIsAuth(true);
     setIsToken(token);
@@ -28,8 +32,10 @@ console.log('cartItem context:', cartItem)
         handleLogOut,
         dummydata,
         cartItem,
+        state,
+        dispatch,
         // handleCartCount,
-        setCartItem
+        setCartItem,
       }}
     >
       {children}
